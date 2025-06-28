@@ -1,0 +1,41 @@
+// Responsivity
+@mixin responsive($sz) {
+  @if $sz == sm {
+    @media (min-width:576px) {
+      @content;
+    }
+  }
+  @else if $sz == md {
+    @media (min-width:767px) {
+      @content;
+    }
+  }
+  @else if $sz == lg {
+    @media (min-width:991px) {
+      @content;
+    }
+  }
+  @else if $sz == xlg {
+    @media (min-width:1200px) {
+      @content;
+    }
+  }
+}
+
+// Element Dimension
+@mixin dimensions($width,$height) {
+  width: $width;
+  height: $height;
+}
+
+// Circle
+@mixin circle($width,$height) {
+  @include dimensions($width, $height);
+  border-radius: 50%;
+}
+
+// Element Positioning
+@mixin position($direction1,$val1,$direction2,$val2) {
+  #{$direction1}: $val1;
+  #{$direction2}: $val2;
+}
