@@ -173,6 +173,7 @@
   margin-bottom: 10px;
   background-color: #F0EDFF;
   border-radius: 16px;
+  overflow: hidden;
 }
 .login-page .form-container form .input:focus-within {
   box-shadow: 0 3px 6px 0px #b1b1b1;
@@ -182,7 +183,6 @@
   height: 52px;
   background-color: transparent;
   padding-left: 50px;
-  overflow: hidden;
 }
 .login-page .form-container form .input input::-moz-placeholder {
   font-size: 12px;

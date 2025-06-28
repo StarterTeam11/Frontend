@@ -46,6 +46,7 @@
         margin-bottom: 10px;
         background-color: $field-bg;
         border-radius: $radius-16;
+        overflow: hidden;
         @extend %transition;
         &:focus-within {
           box-shadow: 0 3px 6px 0px #b1b1b1;
@@ -54,7 +55,6 @@
           @include dimensions($full-width,52px);
           background-color: transparent;
           padding-left: 50px;
-          overflow: hidden;
           &::placeholder {
             font-size: 12px;
             color: $field-color;
