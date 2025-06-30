@@ -4,6 +4,11 @@
   align-items: center;
 }
 
+%align-items-center {
+  display: flex;
+  align-items: center;
+}
+
 %transition {
   transition: all 0.3s;
 }

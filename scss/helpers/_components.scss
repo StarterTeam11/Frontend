@@ -1,0 +1,11 @@
+// imports
+@use "../helpers/variables" as *;
+@use "../helpers/placeholders";
+
+.search {
+  @extend %align-items-center;
+  margin-left: auto;
+  background-color: $white;
+  border-radius: 12px;
+  padding: 10px;
+}

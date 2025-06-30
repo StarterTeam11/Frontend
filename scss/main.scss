@@ -2,6 +2,7 @@
 @use 'helpers/utilities';
 @use 'helpers/placeholders';
 @use 'helpers/mixins';
+@use 'helpers/components';
 
 // Import pages
 @use 'pages/login.scss';

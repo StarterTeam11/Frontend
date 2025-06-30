@@ -1,5 +1,8 @@
-/* ===== Login Page ====== */
-
+/**
+ * Validate Username and Password.
+ * @param {null}
+ * @returns {null}
+ */
 function validation() {
   const loginBtn = document.querySelector(".login-btn");
   const userName = document.querySelector(".username input");
@@ -21,6 +24,13 @@ function validation() {
   });
 }
 
+
+/**
+ * Check Username and Password on Server.
+ * @param {string} username 
+ * @param {string} password 
+ * @returns {null}
+ */
 async function checkData(username,password) {
   username = username.trim();
   password = password.trim();
@@ -58,7 +68,11 @@ async function checkData(username,password) {
   }
 }
 
-
+/**
+ * Shows Error Message if login failed.
+ * @param {string} message 
+ * @returns {null}
+ */
 function showError(message) {
   const errMessage = document.querySelector(".error-message");
   errMessage.textContent = message;

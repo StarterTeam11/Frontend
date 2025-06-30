@@ -6,6 +6,10 @@
   border: none;
 }
 
+ul {
+  list-style: none;
+}
+
 .fs-13 {
   font-size: 13px;
 }
@@ -118,9 +122,254 @@
   font-size: 40px;
 }
 
+.p-5 {
+  padding: 5px;
+}
+
+.pt-5 {
+  padding-top: 5px;
+}
+
+.pe-5 {
+  padding-right: 5px;
+}
+
+.pb-5 {
+  padding-bottom: 5px;
+}
+
+.pl-5 {
+  padding-left: 5px;
+}
+
+.m-5 {
+  margin: 5px;
+}
+
+.mt-5 {
+  margin-top: 5px;
+}
+
+.me-5 {
+  margin-right: 5px;
+}
+
+.mb-5 {
+  margin-bottom: 5px;
+}
+
+.ml-5 {
+  margin-left: 5px;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.pt-10 {
+  padding-top: 10px;
+}
+
+.pe-10 {
+  padding-right: 10px;
+}
+
+.pb-10 {
+  padding-bottom: 10px;
+}
+
+.pl-10 {
+  padding-left: 10px;
+}
+
+.m-10 {
+  margin: 10px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.me-10 {
+  margin-right: 10px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.p-15 {
+  padding: 15px;
+}
+
+.pt-15 {
+  padding-top: 15px;
+}
+
+.pe-15 {
+  padding-right: 15px;
+}
+
+.pb-15 {
+  padding-bottom: 15px;
+}
+
+.pl-15 {
+  padding-left: 15px;
+}
+
+.m-15 {
+  margin: 15px;
+}
+
+.mt-15 {
+  margin-top: 15px;
+}
+
+.me-15 {
+  margin-right: 15px;
+}
+
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.ml-15 {
+  margin-left: 15px;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+.pt-20 {
+  padding-top: 20px;
+}
+
+.pe-20 {
+  padding-right: 20px;
+}
+
+.pb-20 {
+  padding-bottom: 20px;
+}
+
+.pl-20 {
+  padding-left: 20px;
+}
+
+.m-20 {
+  margin: 20px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.me-20 {
+  margin-right: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
+
+.p-25 {
+  padding: 25px;
+}
+
+.pt-25 {
+  padding-top: 25px;
+}
+
+.pe-25 {
+  padding-right: 25px;
+}
+
+.pb-25 {
+  padding-bottom: 25px;
+}
+
+.pl-25 {
+  padding-left: 25px;
+}
+
+.m-25 {
+  margin: 25px;
+}
+
+.mt-25 {
+  margin-top: 25px;
+}
+
+.me-25 {
+  margin-right: 25px;
+}
+
+.mb-25 {
+  margin-bottom: 25px;
+}
+
+.ml-25 {
+  margin-left: 25px;
+}
+
+.p-30 {
+  padding: 30px;
+}
+
+.pt-30 {
+  padding-top: 30px;
+}
+
+.pe-30 {
+  padding-right: 30px;
+}
+
+.pb-30 {
+  padding-bottom: 30px;
+}
+
+.pl-30 {
+  padding-left: 30px;
+}
+
+.m-30 {
+  margin: 30px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.me-30 {
+  margin-right: 30px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.ml-30 {
+  margin-left: 30px;
+}
+
 .login-page .main-login, .login-page .form-container form .google-btn, .login-page .rhs .rhs-container, .login-page .rhs .rhs-container .img-container .ellipse {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.dashboard-page aside .title, .dashboard-page aside ul li, .dashboard-page aside .nav-foot .manager-container, .dashboard-page .content header .container, .dashboard-page .content .statistics .container .statistic .stat, .dashboard-page .content .table .table-header, .search {
+  display: flex;
   align-items: center;
 }
 
@@ -128,7 +377,13 @@
   transition: all 0.3s;
 }
 
-/* Login Vars */
+.search {
+  margin-left: auto;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 10px;
+}
+
 .login-page {
   display: flex;
   font-family: "Poppins", sans-serif;
@@ -223,7 +478,7 @@
   right: 0;
 }
 .login-page .form-container form .error-message {
-  color: red;
+  color: #D0004B;
 }
 .login-page .form-container form .login-btn {
   width: 124px;
@@ -308,4 +563,118 @@
   .login-page .rhs {
     display: block;
   }
+}
+
+.dashboard-page {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+}
+.dashboard-page aside {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #fff;
+  width: 250px;
+  min-height: 100dvh;
+  text-transform: capitalize;
+  box-shadow: 5px 0 10px 0 #d9d9d9;
+}
+.dashboard-page aside ul li {
+  font-size: 14px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+.dashboard-page aside ul .disabled {
+  color: #9197B3;
+  cursor: no-drop;
+}
+.dashboard-page aside ul .active {
+  display: flex;
+  color: #fff;
+  background-color: #5932EA;
+  cursor: pointer;
+}
+.dashboard-page aside ul .active img {
+  margin-left: auto;
+}
+.dashboard-page aside .nav-foot {
+  margin-top: auto;
+}
+.dashboard-page aside .nav-foot .offer {
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+  background: linear-gradient(to right, #EAABF0, #4623E9);
+  border-radius: 20px;
+}
+.dashboard-page aside .nav-foot .offer .text {
+  color: #fff;
+  font-size: 14px;
+}
+.dashboard-page aside .nav-foot .offer .pro-btn {
+  width: 100%;
+  border-radius: 20px;
+  color: #4925E9;
+  background-color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+.dashboard-page aside .nav-foot .manager-container img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+.dashboard-page aside .nav-foot .manager-container .role {
+  color: #525252;
+}
+.dashboard-page .content {
+  width: 100%;
+  background-color: #FAFBFF;
+}
+.dashboard-page .content .statistics {
+  background-color: #fff;
+  border-radius: 30px;
+}
+.dashboard-page .content .statistics img {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+}
+.dashboard-page .content .statistics img:not(:first-child) {
+  margin-left: -10px;
+}
+.dashboard-page .content .statistics .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashboard-page .content .statistics .container .statistic {
+  display: flex;
+}
+.dashboard-page .content .statistics .container .statistic .title {
+  color: #525252;
+}
+.dashboard-page .content .statistics .container .statistic .number {
+  font-weight: 600;
+}
+.dashboard-page .content .statistics .container .statistic .stat {
+  font-size: 12px;
+}
+.dashboard-page .content .statistics .container .statistic .stat.up span {
+  color: #00AC4F;
+}
+.dashboard-page .content .statistics .container .statistic .stat.down span {
+  color: #D0004B;
+}
+.dashboard-page .content .table {
+  background-color: #fff;
+  border-radius: 30px;
+}
+.dashboard-page .content .table .table-header .text span {
+  color: #00AC4F;
+}
+.dashboard-page .content .table .table-header .search {
+  background-color: #FAFBFF;
 }/*# sourceMappingURL=main.css.map */

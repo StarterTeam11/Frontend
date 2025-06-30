@@ -1,0 +1,156 @@
+// import helpers
+@use '../helpers/variables' as *;
+@use '../helpers/placeholders' as *;
+@use '../helpers/mixins' as *;
+
+.dashboard-page {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+
+  aside {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: $white;
+    width: 250px;
+    min-height: 100dvh;
+    text-transform: capitalize;
+    box-shadow: 5px 0 10px 0 #d9d9d9;
+
+    .title {
+      @extend %align-items-center;
+    }
+    
+    ul {
+      li {
+        font-size: 14px;
+        text-transform: capitalize;
+        @extend %align-items-center;
+        margin-bottom: 10px;
+        border-radius: 8px;
+      }
+      .disabled {
+        color: $disabled;
+        cursor: no-drop;
+      }
+      .active {
+        display: flex;
+        color: $white;
+        background-color: $active;
+        cursor: pointer;
+
+        img {
+          margin-left: auto;
+        }
+      }
+    }
+
+    .nav-foot {
+      margin-top: auto;
+
+      .offer {
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+        background: linear-gradient(to right, $linear-start, $linear-end);
+        border-radius: 20px;
+    
+        .text {
+          color: $white;
+          font-size: 14px;
+        }
+        .pro-btn {
+          width: $full-width;
+          border-radius: 20px;
+          color: $btn-color;
+          background-color: $white;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          cursor: pointer;
+        }
+      }
+
+      .manager-container {
+        @extend %align-items-center;
+
+        img {
+          @include circle(42px,42px);
+        }
+        .role {
+          color: $light-gray;
+        }
+      }
+    }
+  }
+
+  .content {
+    width: $full-width;
+    background-color: $content-bg;
+
+    header {
+      .container {
+        @extend %align-items-center;
+      }
+    }
+
+    .statistics {
+      background-color: $white;
+      border-radius: 30px;
+      img {
+        @include circle(26px,26px);
+        
+        &:not(:first-child) {
+          margin-left: -10px;
+        }
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .statistic {
+          display: flex;
+
+          .title {
+            color: $light-gray;
+          }
+          .number {
+            font-weight: 600;
+          }
+          .stat {
+            @extend %align-items-center;
+            font-size: 12px;
+
+            &.up {
+              span {
+                color: $green;
+              }
+            }
+            &.down {
+              span {
+                color: $red;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .table {
+      background-color: $white;
+      border-radius: 30px;
+
+      .table-header {
+        @extend %align-items-center;
+        .text span {
+          color: $green;
+        }
+
+        .search {
+          background-color: $content-bg;
+        }
+      }
+    }
+  }
+}

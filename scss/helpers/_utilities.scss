@@ -6,8 +6,48 @@
   border: none;
 }
 
+ul {
+  list-style: none;
+}
+
 @for $i from 13 through 40 {
   .fs-#{$i} {
     font-size: #{$i}px;
+  }
+}
+
+@for $step from 1 through 6 {
+  $i: $step * 5;
+
+  .p-#{$i} {
+    padding: #{$i}px;
+  }
+  .pt-#{$i} {
+    padding-top: #{$i}px;
+  }
+  .pe-#{$i} {
+    padding-right: #{$i}px;
+  }
+  .pb-#{$i} {
+    padding-bottom: #{$i}px;
+  }
+  .pl-#{$i} {
+    padding-left: #{$i}px;
+  }
+
+  .m-#{$i} {
+    margin: #{$i}px;
+  }
+  .mt-#{$i} {
+    margin-top: #{$i}px;
+  }
+  .me-#{$i} {
+    margin-right: #{$i}px;
+  }
+  .mb-#{$i} {
+    margin-bottom: #{$i}px;
+  }
+  .ml-#{$i} {
+    margin-left: #{$i}px;
   }
 }
