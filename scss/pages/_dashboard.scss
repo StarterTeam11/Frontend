@@ -11,14 +11,36 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    padding: 10px;
     background-color: $white;
-    width: 250px;
+    width: 63px;
     min-height: 100dvh;
     text-transform: capitalize;
     box-shadow: 5px 0 10px 0 #d9d9d9;
 
+    @include responsive(md) {
+      & {
+        width: 250px;
+        padding: 25px;
+      }
+    }
+    
     .title {
       @extend %align-items-center;
+      svg {
+        flex-shrink: 0;
+      }
+
+      h1 {
+        opacity: 0;
+        pointer-events: none;
+      }
+      @include responsive(md) {
+        h1 {
+          opacity: 1;
+          pointer-events: fill;
+        }
+      }
     }
     
     ul {
@@ -28,6 +50,22 @@
         @extend %align-items-center;
         margin-bottom: 10px;
         border-radius: 8px;
+        
+        svg {
+          flex-shrink: 0;
+        }
+        
+        span,img {
+          opacity: 0;
+          pointer-events: none;
+        }
+        @include responsive(md) {
+          & span,img {
+            opacity: 1;
+            pointer-events: all;
+          }
+        }
+        
       }
       .disabled {
         color: $disabled;
@@ -49,12 +87,18 @@
       margin-top: auto;
 
       .offer {
+        display: none;
         padding-left: 15px;
         padding-right: 15px;
         text-align: center;
         background: linear-gradient(to right, $linear-start, $linear-end);
         border-radius: 20px;
-    
+
+        @include responsive(md) {
+          & {
+            display: block;
+          }
+        }
         .text {
           color: $white;
           font-size: 14px;
@@ -73,6 +117,14 @@
       .manager-container {
         @extend %align-items-center;
 
+        .details {
+          display: none;
+
+          @include responsive(md) {
+            display: block
+          }
+        }
+
         img {
           @include circle(42px,42px);
         }
@@ -86,6 +138,7 @@
   .content {
     width: $full-width;
     background-color: $content-bg;
+    overflow: hidden;
 
     header {
       .container {
@@ -103,15 +156,30 @@
           margin-left: -10px;
         }
       }
-
+      
       .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        
+        @include responsive(md) {
+          flex-direction: row;
+        }
 
         .statistic {
           display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          margin-bottom: 25px;
 
+          @include responsive(md) {
+            & {
+              flex-direction: row;
+            }
+          }
           .title {
             color: $light-gray;
           }
@@ -143,12 +211,42 @@
 
       .table-header {
         @extend %align-items-center;
+        margin-bottom: 25px;
         .text span {
           color: $green;
         }
 
         .search {
           background-color: $content-bg;
+        }
+      }
+
+      .table-responsive {
+        overflow-x: auto;
+        &::-webkit-scrollbar {
+          background-color: white;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: $dark-purple;
+          border-radius: 10px;
+        }
+        
+        table {
+          width: $full-width;
+          min-width: 1000px;
+
+          th,td {
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+          }
+          th {
+            text-align: left;
+            color: $table-head;
+            font: {
+              size: 14px;
+              weight: 500;
+            }
+          }
         }
       }
     }
