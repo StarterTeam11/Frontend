@@ -60,7 +60,7 @@ async function checkData(username,password) {
     let token = data.token;
 
     window.localStorage.setItem("token",token);
-    window.location.href = "../dashboard.html";
+    window.location.href = "dashboard.html";
   }
   catch(err) {
     console.error(err);
