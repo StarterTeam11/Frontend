@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Processing Login</title>
+  </head>
+  <body>
+    <script>
+      // Extract token from URL query parameters
+      const urlParams = new URLSearchParams(window.location.search);
+      const token = urlParams.get("token");
+      const error = urlParams.get("error");
+
+      if (token) {
+        localStorage.setItem("token", token);
+        window.location.href = "/dashboard.html";
+      } else if (error) {
+        localStorage.removeItem("token");
+        window.location.href = "/index.html?error=" + encodeURIComponent(error);
+      }
+    </script>
+  </body>
+</html>
