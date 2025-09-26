@@ -1,7 +1,7 @@
 // import helpers
-@use "../helpers/variables" as *;
-@use "../helpers/placeholders" as *;
-@use "../helpers/mixins" as *;
+@use '../helpers/variables' as *;
+@use '../helpers/placeholders' as *;
+@use '../helpers/mixins' as *;
 
 .dashboard-page {
   display: flex;
@@ -24,7 +24,7 @@
         padding: 25px;
       }
     }
-
+    
     .title {
       @extend %align-items-center;
       svg {
@@ -42,7 +42,7 @@
         }
       }
     }
-
+    
     ul {
       li {
         font-size: 14px;
@@ -50,23 +50,22 @@
         @extend %align-items-center;
         margin-bottom: 10px;
         border-radius: 8px;
-
+        
         svg {
           flex-shrink: 0;
         }
-
-        span,
-        img {
+        
+        span,img {
           opacity: 0;
           pointer-events: none;
         }
         @include responsive(md) {
-          & span,
-          img {
+          & span,img {
             opacity: 1;
             pointer-events: all;
           }
         }
+        
       }
       .disabled {
         color: $disabled;
@@ -122,12 +121,12 @@
           display: none;
 
           @include responsive(md) {
-            display: block;
+            display: block
           }
         }
 
         img {
-          @include circle(42px, 42px);
+          @include circle(42px,42px);
         }
         .role {
           color: $light-gray;
@@ -151,20 +150,20 @@
       background-color: $white;
       border-radius: 30px;
       img {
-        @include circle(26px, 26px);
-
+        @include circle(26px,26px);
+        
         &:not(:first-child) {
           margin-left: -10px;
         }
       }
-
+      
       .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
         flex-direction: column;
-
+        
         @include responsive(md) {
           flex-direction: row;
         }
@@ -231,13 +230,12 @@
           background-color: $dark-purple;
           border-radius: 10px;
         }
-
+        
         table {
           width: $full-width;
           min-width: 1000px;
 
-          th,
-          td {
+          th,td {
             padding: 20px 0;
             border-bottom: 1px solid #ddd;
           }
