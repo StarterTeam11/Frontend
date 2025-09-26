@@ -1,9 +1,9 @@
 // Import helpers
-@use 'helpers/utilities';
-@use 'helpers/placeholders';
-@use 'helpers/mixins';
-@use 'helpers/components';
+@use "helpers/utilities";
+@use "helpers/placeholders";
+@use "helpers/mixins";
+@use "helpers/components";
 
 // Import pages
-@use 'pages/login.scss';
-@use 'pages/dashboard.scss';
+@use "pages/login.scss";
+@use "pages/dashboard.scss";
